@@ -1,0 +1,145 @@
+
+/* ===== Reset cơ bản ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== Toàn bộ nền ===== */
+body {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Khung App ===== */
+.app {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ===== Card Todo ===== */
+.todo-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== Tiêu đề ===== */
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== Ô nhập và nút Add ===== */
+.todo-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  background: #f5f5f5;
+}
+
+.todo-input input::placeholder {
+  color: #aaa;
+}
+
+.todo-input button {
+  background: #ff4b4b;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.todo-input button:hover {
+  background: #e64545;
+}
+
+/* ===== Danh sách ===== */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* ===== Mỗi item ===== */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Check tròn giống hình */
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo-checkbox:checked {
+  background: #ff4b4b;
+  border-color: #ff4b4b;
+}
+
+.todo-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Gạch ngang khi hoàn thành */
+.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Nút xóa */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: red;
+}
